@@ -1,0 +1,6 @@
+{
+  "name": "compact-state",
+  "version": "0.1.0",
+  "description": "After /compact, the session reads or creates its own state file so it keeps its place.",
+  "license": "MIT"
+}

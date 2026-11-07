@@ -1,0 +1,11 @@
+{
+  "name": "compact-state",
+  "owner": { "name": "compact-state-skill" },
+  "plugins": [
+    {
+      "name": "compact-state",
+      "description": "After /compact, the session reads or creates its own state file so it keeps its place.",
+      "source": "./"
+    }
+  ]
+}
