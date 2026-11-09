@@ -43,7 +43,7 @@ After compaction: no state file yet. Create /home/you/.claude/state/abc.md now w
 
 - Unit tests (`npm test`, 7 tests), and each fix was checked by reverting it and seeing a test fail.
 - The two install commands above were run in a clean home directory: the plugin installed, was enabled, and uninstalled cleanly.
-- A real `/compact` in one session, using the same script as a user-level hook rather than the plugin install: the session then wrote a notes file with the four headings and one decision, quoted, with who said it and the date. I checked the file by counts and headings, not by reading it.
+- A real `/compact` in a fresh session with the plugin installed from this repo by the two commands above: the plugin's hook fired, and the session then wrote a notes file with the four headings and one decision, quoted, with who said it and the date. I checked the file by counts and headings, not by reading it.
 - The hook cannot write the file. The session writes it on its next turn after the compaction.
 
 This comes from one person's sessions. I have not seen how it behaves in other people's setups, so please open an issue if it does not do what is described here.
