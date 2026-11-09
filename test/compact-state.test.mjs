@@ -42,3 +42,9 @@ test('unwritable state dir does not throw', () => {
   writeFileSync(join(h, '.claude'), 'a file, so mkdir fails');
   assert.match(message('{"session_id":"abc"}', h), /Create/);
 });
+
+test('missing-file message asks for the four sections and verbatim dated decisions', () => {
+  const m = message('{"session_id":"abc"}', home());
+  for (const s of ['State now', 'Decisions', 'verbatim', 'who said it and the date', 'IDs and paths', 'Next']) assert.ok(m.includes(s), s);
+  assert.ok(!m.includes('from your summary'));
+});

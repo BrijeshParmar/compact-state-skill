@@ -15,7 +15,7 @@ export function message(input, home = homedir()) {
   const file = join(dir, `${id || 'unknown'}.md`);
   return existsSync(file)
     ? `After compaction: read ${file} first and treat it as your current state. Keep appending one line per step.`
-    : `After compaction: no state file yet. Create ${file} now from your summary (role, task, decisions, next step; cwd ${cwd}), then append one line per step so the next compaction loses nothing.`;
+    : `After compaction: no state file yet. Create ${file} now with four sections: State now; Decisions (write each one verbatim, with who said it and the date); IDs and paths; Next. cwd ${cwd}. Then append one line per step so the next compaction loses nothing.`;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

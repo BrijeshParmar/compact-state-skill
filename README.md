@@ -25,12 +25,12 @@ Optional: delete `~/.claude/state/` to remove the state files it pointed at.
 After each compaction it prints one line into the session's context:
 
 - State file exists: "read `~/.claude/state/<session_id>.md` first and treat it as your current state."
-- No state file: "create it now from your summary (role, task, decisions, next step, cwd), then append one line per step."
+- No state file: "create it now with four sections: State now; Decisions (each written verbatim, with who said it and the date); IDs and paths; Next. Then append one line per step."
 
 Example after a compaction in session `abc`:
 
 ```
-After compaction: no state file yet. Create /home/you/.claude/state/abc.md now from your summary ...
+After compaction: no state file yet. Create /home/you/.claude/state/abc.md now with four sections: State now; Decisions ...
 ```
 
 ## What it does not do
